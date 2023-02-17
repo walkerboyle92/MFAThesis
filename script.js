@@ -76,15 +76,29 @@ function changeState (whichFolder, content, otherFolders){
 let folderState = whichFolder.children[0].children[0].getAttribute('src');
 let mainScreen = document.querySelector('main');
 
-//close other folders
-// otherFolders.forEach(folder =>{
-//     if(folder != whichFolder){
-//        folder.children[0].children[0].setAttribute('src',  "img/folder-closed.png");
-//        folderState = "img/folder-closed.png";
+// close other folders
+otherFolders.forEach(folder =>{
+    if(folder != whichFolder){
+       folder.children[0].children[0].setAttribute('src',  "img/folder-closed.png");
+       folderState = "img/folder-closed.png";
+       
+       let folderContent = folder.querySelectorAll('.folder-content');
+       folderContent.forEach(content_piece =>{
+
+        //display none added
+        content_piece.classList.add('hidden'); 
+    
+        if(content_piece.tagName == "VIDEO"){
+            content_piece.pause(); //for videos
+          
+        }
+    
+      
+        })
        
 
-//     }
-// })
+    }
+})
 
 
 //change to open
