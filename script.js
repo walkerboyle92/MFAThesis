@@ -10,9 +10,8 @@ $(document).ready(function(){
          })
         });
 
-//main window
+ //main window
 let main_window = document.getElementById('welcome');
-
 
 //find all windows and bring the active one to top
 let windows = document.querySelectorAll('.window');
@@ -22,6 +21,14 @@ window.addEventListener("mousedown", function() {
     bringToTop(this);
   });
 })
+
+// TURNED OFF FOR TESTS
+
+// //alert
+// main_window.addEventListener("animationend", function() {
+//    alert("turn back");
+// });
+
 
 //make sure selected window is in front
 var top_z = 10;
@@ -94,11 +101,8 @@ otherFolders.forEach(folder =>{
             content_piece.pause(); //for videos
           
         }
-    
       
-        })
-
-       
+        }) 
     }
 })
 
