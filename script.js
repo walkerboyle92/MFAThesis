@@ -12,7 +12,7 @@ $(document).ready(function(){
 
 //main window
 let main_window = document.getElementById('welcome');
-console.log(main_window);
+
 
 //find all windows and bring the active one to top
 let windows = document.querySelectorAll('.window');
@@ -65,6 +65,7 @@ folderContent.forEach(content =>{
 folder_img.addEventListener('click', function() {
     changeState(folder, folderContent, folders);
   
+  
   });
 
 })
@@ -76,37 +77,38 @@ function changeState (whichFolder, content, otherFolders){
 let folderState = whichFolder.children[0].children[0].getAttribute('src');
 let mainScreen = document.querySelector('main');
 
-// close other folders
+
+//CLOSE OTHER FOLDERS
 otherFolders.forEach(folder =>{
     if(folder != whichFolder){
        folder.children[0].children[0].setAttribute('src',  "img/folder-closed.png");
-       folderState = "img/folder-closed.png";
+    //    folderState = "img/folder-closed.png";
        
        let folderContent = folder.querySelectorAll('.folder-content');
+       
        folderContent.forEach(content_piece =>{
-
+        console.log(content_piece);
         //display none added
         content_piece.classList.add('hidden'); 
-    
-        if(content_piece.tagName == "VIDEO"){
-            content_piece.pause(); //for videos
-          
-        }
-    
       
         })
-       
 
+       
     }
 })
 
 
-//change to open
+
+
+//OPEN FOLDER
 if(folderState == "img/folder-closed.png"){
+   
+    //change image to open
     whichFolder.children[0].children[0].setAttribute('src',  "img/folder-open.png");
+    //change state to open
     folderState = "img/folder-open.png";
+    console.log(folderState);
     
- 
     
 
 //for each piece of folder content
@@ -129,11 +131,13 @@ content.forEach(content_piece =>{
 
 console.log('open');
     
-//change to closed
 } 
 
-else{
-    
+
+
+//CLOSE FOLDER
+else {
+    console.log(folderState);
     whichFolder.children[0].children[0].setAttribute('src',"img/folder-closed.png");
     folderState = "img/folder-closed.png";
 
