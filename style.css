@@ -42,6 +42,15 @@ a{
 .readme{
     padding: 10px;
 }
+
+#mouse{
+    height: 300px;
+    width: 316px;
+
+    animation-name: float;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
 .window{
     
     display: inline;
@@ -144,6 +153,22 @@ video{
     width: 35px;
     height: 43.75px;
 }
+
+#flames{
+    position: absolute;
+    bottom: 2px;
+    visibility: hidden;
+}
+
+#broken{
+    position: absolute;
+    right:0px;
+    bottom: 0px;
+    height: 60%;
+    width: 20%;
+    visibility: hidden;
+}
+
 
 /*animation for opening files*/
 @keyframes open{

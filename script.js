@@ -36,6 +36,7 @@ var top_z = 10;
 function bringToTop(element)
 {
     element.style.zIndex = ++top_z;
+    document.getElementById("broken").style.zIndex = top_z +1;
 }
 
 //get rank
@@ -183,11 +184,23 @@ else{
   
   });
 
+  //rank 1
+  if(rank >=1){
+    document.getElementById("broken").style.visibility = "visible";
+  }
+
+
   //triangle lady appears
   if(rank >=2){
    document.getElementById("triangleLady").style.visibility = "visible";
   }
 
+  //on fire
+  if(rank >=3){
+    document.getElementById("flames").style.visibility = "visible";
+    
+
+  }
 
 });
 
