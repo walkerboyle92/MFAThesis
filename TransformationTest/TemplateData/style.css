@@ -10,12 +10,23 @@ body {
     padding: 0; 
     margin: 0; 
     background-image: url("BKG15.png");
+
 }
 
-/* header{
+
+header{
     text-align: center;
     height: 12%;
-} */
+}
+
+#button{
+    
+    float: left;
+ /* margin-left: 400px; */
+     width: 125px; 
+     height: 50px; 
+     /* background: url('webgl-logo.png') no-repeat center */
+ }
 
 .left{
     position: absolute;
@@ -33,6 +44,14 @@ body {
     width: 25%;  
 }
 
+aside img{
+    height: 250px;
+    width: 300px;
+    padding-left: 10%;
+    position: absolute;
+    top: 20%;
+}
+
 img{
     height: 100%;
 }
@@ -41,7 +60,7 @@ img{
 }
 #unity-container.unity-desktop {
      left: 50%;
-      top: 50%; 
+      top: 60%; 
       transform: translate(-50%, -50%) 
     }
 #unity-container.unity-mobile { width: 100%; height: 100% }
@@ -77,6 +96,14 @@ img{
         font-size: 13px;
         color: white;
     }
-#unity-build-title { float: right; margin-right: 10px; line-height: 38px; font-family: arial; font-size: 18px }
+#unity-build-title { float: right;
+     margin-right: 10px; 
+     line-height: 38px; 
+     font-family: 'Rubik Pixels', cursive;
+      font-size: 32px ;
+      color:white;
+    }
 #unity-fullscreen-button { float: right; width: 38px; height: 38px; background: url('fullscreen-button.png') no-repeat center }
 #unity-warning { position: absolute; left: 50%; top: 5%; transform: translate(-50%); background: white; padding: 10px; display: none }
+
+
