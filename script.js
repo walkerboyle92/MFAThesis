@@ -39,8 +39,8 @@ function bringToTop(element)
 }
 
 //get rank
-// localStorage.setItem("rank", 0);
-
+// localStorage.setItem("rank", 0); 
+//--> create button for this
 let rank = localStorage.getItem("rank");
 console.log(rank);
 
@@ -168,6 +168,25 @@ else {
 }
 }
 
+//secret folder click event
+document.getElementById("secrets").addEventListener('click', function() {
+  
+    // console.log(this.children[0].children[0].getAttribute('src'));
+if(this.children[0].children[0].getAttribute('src')=="img/folder-open.png"){
+    document.body.style.backgroundImage = "url('img/unhappy.jpg')"; 
+    document.body.style.backgroundSize = "50px 50px";
+}
+else{
+    document.body.style.backgroundImage = "url('img/8bitPentagram.jpg')"; 
+    document.body.style.backgroundSize = "37.5px 30px";
+} 
+  
+  });
+
+  //triangle lady appears
+  if(rank ==2){
+   document.getElementById("triangleLady").style.visibility = "visible";
+  }
 
 
 });

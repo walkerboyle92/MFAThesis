@@ -14,14 +14,18 @@ main{
 }
 body{
 background-image: url("img/8bitPentagram.jpg");
+/* background-image: url("img/unhappy.jpg"); */
+/* background-size: 50px 50px; */
 background-attachment: fixed;
 background-size: 37.5px 30px;
+
 font-size: 12px;
 }
 
 a{
     text-decoration: none;
     font-family: 'Source Code Pro', monospace;
+
 }
 
 #main {
@@ -145,6 +149,14 @@ video{
 @keyframes open{
     0%{transform: scale(0);}
     100%{transform: scale(1);}
+}
+
+#triangleLady{
+    position:absolute;
+    z-index: 1;
+    top: 40%;
+    left: -100px;
+    visibility: hidden;
 }
 
 @keyframes close{
