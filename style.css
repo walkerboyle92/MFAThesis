@@ -104,8 +104,8 @@ video{
 }
 
 .folders img{
-    height: 40px;
-    width: 55px;
+    height: 30px;
+    width: 41.25px;
 }
 
 .unlocked img{
@@ -121,7 +121,7 @@ video{
 }
 
 
-.content-1, .content-2, .content-3{
+.content-0, .content-1, .content-2, .content-3{
     position: relative;
     left: 40px;
     top: 10px;
@@ -129,16 +129,16 @@ video{
 }
 
 #happy_img{
-    width: 40px;
-    height: 50px;
+    width: 35px;
+    height: 43.75px;
     animation-name: float;
     animation-duration: 5s;
     animation-iteration-count: infinite;
 }
 
 #file_image{
-    width: 40px;
-    height: 50px;
+    width: 35px;
+    height: 43.75px;
 }
 
 /*animation for opening files*/
