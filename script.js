@@ -184,7 +184,7 @@ else{
   });
 
   //triangle lady appears
-  if(rank ==2){
+  if(rank >=2){
    document.getElementById("triangleLady").style.visibility = "visible";
   }
 
