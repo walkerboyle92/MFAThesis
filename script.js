@@ -40,7 +40,7 @@ function bringToTop(element)
 }
 
 //get rank
-// localStorage.setItem("rank", 0); 
+// localStorage.setItem("rank", 1); 
 //--> create button for this
 let rank = localStorage.getItem("rank");
 console.log(rank);
@@ -183,6 +183,7 @@ else{
 } 
   
   });
+
 
   //rank 1
   if(rank >=1){
