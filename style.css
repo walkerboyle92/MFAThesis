@@ -204,3 +204,11 @@ video{
     50%{ transform: translateY(10px);}
     100% { transform: translateY(0px);}
 }
+
+@media (max-width: 1250px) {
+   
+
+
+
+  }
+  

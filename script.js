@@ -40,7 +40,7 @@ function bringToTop(element)
 }
 
 //get rank
-// localStorage.setItem("rank", 1); 
+// localStorage.setItem("rank", 0); 
 //--> create button for this
 let rank = localStorage.getItem("rank");
 console.log(rank);
@@ -184,7 +184,7 @@ else{
   
   });
 
-
+//GAME PROGRESSION
   //rank 1
   if(rank >=1){
     document.getElementById("broken").style.visibility = "visible";
@@ -199,8 +199,8 @@ else{
   //on fire
   if(rank >=3){
     document.getElementById("flames").style.visibility = "visible";
+    document.getElementById("warning3").style.visibility = "visible";
     
-
   }
 
 });
