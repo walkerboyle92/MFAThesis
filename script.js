@@ -37,6 +37,7 @@ function bringToTop(element)
 {
     element.style.zIndex = ++top_z;
     document.getElementById("broken").style.zIndex = top_z +1;
+    document.getElementById("flames").style.zIndex = top_z +1;
 }
 
 //get rank
@@ -202,6 +203,8 @@ else{
     document.getElementById("warning3").style.visibility = "visible";
     
   }
+ console.log($(window).height());
+ console.log($(window).width());
 
 });
 
