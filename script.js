@@ -30,6 +30,7 @@ window.addEventListener("mousedown", function() {
 // });
 
 
+
 //make sure selected window is in front
 var top_z = 10;
 
@@ -38,6 +39,8 @@ function bringToTop(element)
     element.style.zIndex = ++top_z;
     document.getElementById("broken").style.zIndex = top_z +1;
     document.getElementById("flames").style.zIndex = top_z +1;
+    document.getElementById("mobileWarning").style.zIndex = top_z +1;
+    // document.getElementById("photos").style.zIndex = top_z +2;
 }
 
 //get rank
@@ -55,9 +58,8 @@ folders.forEach(folder =>{
 
 //get folder content
 let folderContent = folder.querySelectorAll('.folder-content')
-
-
 let folder_img = folder.querySelector('.folder-img');
+
 
 folderContent.forEach(content =>{
     content.classList.add('hidden');
