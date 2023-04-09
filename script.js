@@ -193,19 +193,40 @@ else{
 let readMe = document.getElementById("readMe");
 let signButton = document.getElementById("signButton");
 let readMeLink = document.querySelector(".readme");
+let continueButton = document.getElementById("continueButton");
+let fateSealed =  document.getElementById("fateSealed")
 
 function startedGame(){
     readMe.classList.add("hidden");
     main_window.classList.remove("hidden");
     code_window.classList.remove("hidden");
+    continueButton.classList.remove("hidden");
+    document.getElementById("mouse").classList.remove("hidden");
+    signButton.style.display="none";
+
 }
 
-signButton.addEventListener("mousedown", startedGame);
+signButton.addEventListener("mousedown", function(){
+    fateSealed.style.display = "block";
+    readMe.classList.add("hidden");
+    document.getElementById("mouse").classList.add("hidden");
+
+})
+
+//windows appear after animation
+fateSealed.addEventListener("animationend", function(){
+    fateSealed.style = display = "none";
+    console.log("animation ended");
+    startedGame();
+})
+
+continueButton.addEventListener("mousedown", function(){
+    readMe.classList.add("hidden");
+})
    
 
 readMeLink.addEventListener("mousedown", function() {
-    readMe.classList.remove("hidden");
-  
+    readMe.classList.remove("hidden"); 
 
 })
 
