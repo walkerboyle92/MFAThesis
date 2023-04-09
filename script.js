@@ -12,6 +12,7 @@ $(document).ready(function(){
 
  //main window
 let main_window = document.getElementById('welcome');
+let code_window = document.getElementById('codeWindow');
 
 //find all windows and bring the active one to top
 let windows = document.querySelectorAll('.window');
@@ -40,7 +41,8 @@ function bringToTop(element)
     document.getElementById("broken").style.zIndex = top_z +1;
     document.getElementById("flames").style.zIndex = top_z +1;
     document.getElementById("mobileWarning").style.zIndex = top_z +1;
-    // document.getElementById("photos").style.zIndex = top_z +2;
+    document.getElementById("readMe").style.zIndex = top_z +1;
+    
 }
 
 //get rank
@@ -187,26 +189,78 @@ else{
   
   });
 
+  //READ ME FUNCTIONALITY
+let readMe = document.getElementById("readMe");
+let signButton = document.getElementById("signButton");
+let readMeLink = document.querySelector(".readme");
+
+function startedGame(){
+    readMe.classList.add("hidden");
+    main_window.classList.remove("hidden");
+    code_window.classList.remove("hidden");
+}
+
+signButton.addEventListener("mousedown", startedGame);
+   
+
+readMeLink.addEventListener("mousedown", function() {
+    readMe.classList.remove("hidden");
+  
+
+})
+
 //GAME PROGRESSION
+const lockedList = document.querySelectorAll(".locked");
+for (let i = 0; i < lockedList.length; i++) {
+//   console.log(lockedList[i]);
+    lockedList[i].children[0].src="img/deadComp.png";
+    lockedList[i].children[1].href="#";
+    lockedList[i].children[1].innerText ="forbidden";
+    lockedList[i].children[1].classList.add("forbidden");
+}
+
+
+
+if(rank < 1){
+    readMe.classList.remove("hidden");   
+}
   //rank 1
   if(rank >=1){
     document.getElementById("broken").style.visibility = "visible";
-  }
+    unlock(lockedList[2], "Pronouns/index.html", "public service announcement");
 
+    startedGame();
+
+  }
 
   //triangle lady appears
   if(rank >=2){
    document.getElementById("triangleLady").style.visibility = "visible";
+   unlock(lockedList[0], "TransformationTest/index.html", "spell_of_transformation");
   }
 
   //on fire
   if(rank >=3){
     document.getElementById("flames").style.visibility = "visible";
     document.getElementById("warning3").style.visibility = "visible";
+    unlock(lockedList[1], "NewStrategy/index.html", "new strategy");
     
   }
- console.log($(window).height());
- console.log($(window).width());
+//  console.log($(window).height());
+//  console.log($(window).width());
+
+
+function unlock(whichContent, link, text){
+whichContent.children[0].src = "img/happy_game.png";
+whichContent.children[0].classList.add("float");
+console.log(whichContent.children[0].classList);
+whichContent.children[1].href=` ${link}`;
+whichContent.children[1].innerText = `${text}`;
+whichContent.children[1].classList.remove("forbidden");
+}
+
+
+
 
 });
 

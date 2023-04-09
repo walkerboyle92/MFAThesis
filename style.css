@@ -1,8 +1,13 @@
-/*    font-family: 'Chakra Petch', sans-serif;
+/*     font-family: 'Black Ops One', cursive;
 
-    font-family: 'Eczar', serif;
+    font-family: 'Libre Barcode 39 Text', cursive;
+
+    font-family: 'Press Start 2P', cursive;
 
     font-family: 'Source Code Pro', monospace;
+    font-family: 'Redacted Script', cursive;
+
+    font-family: 'Silkscreen', cursive;
 
 */
 html, body{
@@ -20,14 +25,26 @@ background-image: url("img/8bitPentagram.jpg");
 background-attachment: fixed;
 background-size: 37.5px 30px;
 
-font-size: 12px;
+font-size: 14px;
 }
 
 a{
     text-decoration: none;
-    font-family: 'Source Code Pro', monospace;
-
+    font-family: 'Silkscreen', cursive;
+    color:black;
+    margin-left: 5px;
 }
+
+/* visited link */
+ a:visited {
+    color: black;
+
+  } 
+  
+  /* mouse over link */
+  a:hover {
+    color: hotpink;
+  }
 
 #main {
     height: 600px;
@@ -40,9 +57,33 @@ a{
     height: 80%;
     width: 80%;
 }
+
+/*READ ME STYLING*/
+#readMe{
+    left: 30%;
+    top: 0%;
+    position: absolute;
+}
+
+#document{
+    height: 100%;
+}
 .readme{
     padding: 10px;
 }
+
+#signButton{
+    position: absolute;
+    right: 2%;
+    bottom: 2%;
+    height: 10%;
+}
+/*  */
+
+
+
+
+/*end of READ ME*/
 
 #mouse{
     height: 300px;
@@ -143,12 +184,15 @@ video{
     padding: 10px;
 }
 
-#happy_img{
-    width: 35px;
-    height: 43.75px;
+.float{
     animation-name: float;
     animation-duration: 5s;
     animation-iteration-count: infinite;
+}
+
+#happy_img{
+    width: 35px;
+    height: 43.75px;
 }
 
 #file_image{
@@ -203,23 +247,31 @@ video{
   background-color: rgba(245, 143, 213, 0.677); /* Black background with opacity */
 }
 
-#photos img{
-max-width: 100%;
-height:100%;
-}
-
-/*animation for opening files*/
-@keyframes open{
-    0%{transform: scale(0);}
-    100%{transform: scale(1);}
-}
-
 #triangleLady{
     position:absolute;
     z-index: 1;
     top: 40%;
     left: -100px;
     visibility: hidden;
+}
+
+.forbidden{
+    font-family: 'Libre Barcode 39 Text', cursive;
+    color: red;
+    font-size: 22px;
+    margin-left: 6px;
+}
+
+.forbidden:hover{
+    font-family: 'Redacted Script', cursive;
+    font-size: 32px;
+}
+
+
+/*animation for opening files*/
+@keyframes open{
+    0%{transform: scale(0);}
+    100%{transform: scale(1);}
 }
 
 @keyframes close{
@@ -241,6 +293,10 @@ height:100%;
 
 .overlay{
     visibility: visible;
+}
+
+.window{
+    visibility: hidden;
 }
 
   }

@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;600&family=Eczar&family=Source+Code+Pro&display=swap" rel="stylesheet">    
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Libre+Barcode+39+Text&family=Redacted+Script:wght@300&family=Silkscreen&family=Source+Code+Pro:wght@300;400&display=swap" rel="stylesheet">
+
     <link rel="shortcut icon" href="/img/8bitPentagram.jpg">
     <script src="//code.jquery.com/jquery-1.9.1.js"></script>
     <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
@@ -18,18 +19,19 @@
 </head>
 <body>
     <main>
-    
-        <img class="window" id="codeWindow" src="img/CodeWindow.gif">
-        <img class="window" id="mouse" src="img/mouse.jpg">
+        
+        <img id="triangleLady" src="img/TriangleLadyPixel.png">
+        <img class="window hidden" id="codeWindow" src="img/CodeWindow.gif">
+
     
 <!--Welcome Window-->
-        <div class="window" id="welcome"> 
+        <div class="window hidden" id="welcome"> 
             <img id="main" src="img/WelcomeWindow.png">
         
             
 <!--class containing all folders-->
             <div class="folders">
-            <div class="readme">
+            <div class="readme folder-img">
                 <img id="file_image" src="img/document.png"> <a href="#">ReadMe.doc</a>
             </div>
 
@@ -42,7 +44,7 @@
    
     <!--folder content-->
     <div class="folder-content">
-        <img id="happy_img" src="img/deadComp.png">
+        <img class="float" id="happy_img" src="img/happy_game.png">
         <a href="CallingCPS/index.html">calling_cps</a>
       </div>
     
@@ -54,13 +56,9 @@
                     <img src="img/folder-closed.png" >
                     <a href="#">rituals</a>
                 </div>
-                <!-- <div class="unlocked">
-                    <img src="img/unlocked.png">
-                </div> -->
                 
                 <!--folder content-->
-                <div  >
-               
+                <div>
                 <video class="window folder-content" loop controls autoPlay>
                     <source src="img/tenThousand.mp4" type="video/mp4">
               
@@ -68,21 +66,23 @@
                   </video>
                 </div>
 
-                  <div class="folder-content">
+                  <div class="folder-content locked"><!--unlocked in rank 2-->
                     <img id="happy_img" src="img/happy_game.png">
                     <a href="TransformationTest/index.html">spell_of_transformation</a>
                   </div>
                 
                 <div class="folder-content">
                     <img id="file_image" src="img/file.png">
+                    <a href="pages/blood.html">blood.jpeg</a>
                 </div>
                
-                <div class="folder-content">
+                <div class="folder-content locked"><!--unlocked in rank 3-->
                     <img id="happy_img" src="img/deadComp.png">
                     <a href="NewStrategy/index.html">New Strategy</a>
                 </div>
 
-               </div>
+
+                </div>
 
 <!--misc folder-->
             <div class="folder">
@@ -92,9 +92,9 @@
                 </div>
                
 
-                <!--folder content-->
-                <div class="folder-content">
-                    <img id="file_image" src="img/file.png">
+                <!--folder content--> <!--unlocked in rank 1-->
+                <div class="folder-content locked">
+                    <img id="happy_img" src="img/happy_game.png">
                     <a href="Pronouns/index.html">public service announcement</a>
                 </div>
             </div>    
@@ -115,17 +115,21 @@
             </div>
         </div>
         </div>
-    <!-- <div id="photos">
-        <img src="img/PhotoOverlay.png">
-    </div> -->
-      <img id="flames" src="img/onFire.gif">
-      <img id="broken" src="img/Broken-Glass.png">
-     <img id="triangleLady" src="img/TriangleLadyPixel.png">
-     <img class="window" id="warning3" src="img/Warning3.jpg">
-     <div class="overlay">
-        <img class="window" id="mobileWarning" src="img/MobileWarning.jpg">
-     </div>
- 
+
+    <img id="flames" src="img/onFire.gif">
+    <img id="broken" src="img/Broken-Glass.png">
+    <img class="window" id="warning3" src="img/Warning3.jpg">
+    <img class="window" id="mouse" src="img/mouse.jpg">
+
+ <div class="window hidden" id="readMe">
+    <img id="document" src="img/ReadMe.gif">
+    <img id="signButton" src="img/signButton.gif">
+ </div>
+
+ <div class="overlay">
+    <img class="window" id="mobileWarning" src="img/MobileWarning.jpg">
+ </div>
+    
         
     </main>
 

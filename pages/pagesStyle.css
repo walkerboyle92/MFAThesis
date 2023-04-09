@@ -1,0 +1,37 @@
+html, body{
+height: 100%;
+overflow: hidden;
+margin: 0px;
+background-image: url('../img/8bitPentagram.jpg');
+background-attachment: fixed;
+background-size: 37.5px 30px;
+}
+
+#main{
+    width: 1066px;
+    height: 600;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    animation-name: float;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+#button{
+margin-left: 20px;
+margin-top: 20px;
+     width: 125px; 
+     height: 45px; 
+ }
+ 
+
+
+@keyframes float{
+    0%{ transform: translateY(0px);}
+    50%{ transform: translateY(10px);}
+    100% { transform: translateY(0px);}
+}
