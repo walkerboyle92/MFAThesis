@@ -313,7 +313,7 @@ function checkRank(){
       if(rank >=4){
         document.getElementById("flames").style.visibility = "visible";
         document.getElementById("warning3").style.visibility = "visible";
-        unlock(lockedList[1], "NewStrategy/index.html", "new strategy");
+        unlock(lockedList[1], "https://walkerboyle.com/MFA/NewStrategy/", "new strategy");
         
       }
 }
