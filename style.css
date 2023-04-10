@@ -231,6 +231,8 @@ video{
     position: absolute;
     bottom: 2px;
     visibility: hidden;
+    height: 100px;
+    left: 20%;
 }
 
 #broken{

@@ -50,7 +50,7 @@ function bringToTop(element)
 // localStorage.setItem("rank", 0); 
 //--> create button for this
 let rank = localStorage.getItem("rank");
-console.log(rank);
+
 
 //number each piece of folder content
 let contentIndex = 0;
@@ -195,7 +195,7 @@ let readMeLink = document.querySelector(".readme");
 let continueButton = document.getElementById("continueButton");
 let fateSealed =  document.getElementById("fateSealed")
 let startOverButton = document.getElementById("startOver");
-console.log(startOverButton);
+
 
 function startedGame(){
     readMe.classList.add("hidden");
@@ -205,6 +205,7 @@ function startedGame(){
     document.getElementById("mouse").classList.remove("hidden");
     signButton.style.display="none";
     startOverButton.style.display =" inline-block";
+    
 
 }
 
@@ -221,6 +222,7 @@ fateSealed.addEventListener("animationend", function(){
     fateSealed.style = display = "none";
     console.log("animation ended");
     startedGame();
+    localStorage.setItem("rank", 1); 
 })
 
 continueButton.addEventListener("mousedown", function(){
@@ -235,44 +237,62 @@ readMeLink.addEventListener("mousedown", function() {
 
 //START OVER
 function startOver(){
-rank = 0;
+localStorage.setItem("rank", 0); 
+rank=0;
 checkRank();
 main_window.classList.add("hidden");
 code_window.classList.add("hidden");
 signButton.style.display="inline-block";
 continueButton.classList.add("hidden");
 startOverButton.style.display = "none";
-console.log("clicked");
+
 
 }
 
 //GAME PROGRESSION
 const lockedList = document.querySelectorAll(".locked");
-for (let i = 0; i < lockedList.length; i++) {
-//   console.log(lockedList[i]);
-    lockedList[i].children[0].src="img/deadComp.png";
-    lockedList[i].children[1].href="#";
-    lockedList[i].children[1].innerText ="forbidden";
-    lockedList[i].children[1].classList.add("forbidden");
+
+function lock(){
+    for (let i = 0; i < lockedList.length; i++) {
+        //   console.log(lockedList[i]);
+            lockedList[i].children[0].src="img/deadComp.png";
+            lockedList[i].children[1].href="#";
+            lockedList[i].children[1].innerText ="forbidden";
+            lockedList[i].children[1].classList.add("forbidden");
+        }
+        
+
 }
 
 startOverButton.addEventListener("mousedown", startOver);
 
 checkRank();
 function checkRank(){
-    console.log("page loaded");
+    console.log("page loaded", rank);
 
     if(rank < 1){
         readMe.classList.remove("hidden");   
+        console.log(readMe);
         document.getElementById("broken").style.visibility = "hidden";
         document.getElementById("triangleLady").style.visibility = "hidden";
         document.getElementById("flames").style.visibility = "hidden";
         document.getElementById("warning3").style.visibility = "hidden";
+
+        //reset links and images
+        lock();
     }
 
-      //rank 1
-      if(rank >=1){
+    if(rank ==1){
+        lock();
+        startedGame();
+    
+
+    }
+
+      //calling cps
+      if(rank >=2){
         document.getElementById("broken").style.visibility = "visible";
+        lock();
         unlock(lockedList[2], "Pronouns/index.html", "public service announcement");
     
         startedGame();
@@ -280,13 +300,17 @@ function checkRank(){
       }
     
       //triangle lady appears
-      if(rank >=2){
+      if(rank >=3){
        document.getElementById("triangleLady").style.visibility = "visible";
+       document.getElementById("flames").style.visibility = "hidden";
+       document.getElementById("warning3").style.visibility = "hidden";
+
+       lock();
        unlock(lockedList[0], "TransformationTest/index.html", "spell_of_transformation");
       }
     
       //on fire
-      if(rank >=3){
+      if(rank >=4){
         document.getElementById("flames").style.visibility = "visible";
         document.getElementById("warning3").style.visibility = "visible";
         unlock(lockedList[1], "NewStrategy/index.html", "new strategy");
