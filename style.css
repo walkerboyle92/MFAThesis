@@ -63,19 +63,21 @@ a{
     margin: 10% 20% 0%;
     color: white;
     font-family: 'Black Ops One', cursive;
-    font-size: 46px;
+    font-size: 3.5em;
+ 
    
 }
 
 #remainder{
     display: block;
     font-family: 'Silkscreen', cursive;
-    font-size: 32px;
+    font-size: 2em;
     text-align: center;
     color:red;
     background-color: black;
-    margin-top: 30px;
-    padding: 20px;
+    max-width: 100%;
+    padding: 2%;
+
 }
 
 /*READ ME STYLING*/
@@ -243,8 +245,9 @@ video{
     right: 0;
     bottom: 0;
     left: 0;
-    height: 100%;
-    max-width: 500px;
+    height: 90%;
+    max-width: 400px;
+    max-height:644px;
 }
 
 #flames{
@@ -346,18 +349,23 @@ video{
     60%{opacity: 100%;}
     100%{opacity: 0%; };
 }
-@media (max-width: 1025px) {
+@media (max-width: 1024px) {
    
-#mobileWarning{
+/* #mobileWarning{
    visibility: visible;
-}
+} */
 
-.overlay{
+/* .overlay{
     visibility: visible;
-}
+} */
 
 .window{
     visibility: hidden;
+}
+
+#notice{
+    margin:auto;
+    max-width: 100%;
 }
 
   }
