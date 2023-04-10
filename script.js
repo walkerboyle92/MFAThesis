@@ -42,6 +42,7 @@ function bringToTop(element)
     document.getElementById("flames").style.zIndex = top_z +1;
     document.getElementById("mobileWarning").style.zIndex = top_z +1;
     document.getElementById("readMe").style.zIndex = top_z +1;
+    document.getElementById("startOver").style.zIndex = top_z +1;
     
 }
 
@@ -111,8 +112,6 @@ otherFolders.forEach(folder =>{
         }) 
     }
 })
-
-
 
 
 //OPEN FOLDER
@@ -195,6 +194,8 @@ let signButton = document.getElementById("signButton");
 let readMeLink = document.querySelector(".readme");
 let continueButton = document.getElementById("continueButton");
 let fateSealed =  document.getElementById("fateSealed")
+let startOverButton = document.getElementById("startOver");
+console.log(startOverButton);
 
 function startedGame(){
     readMe.classList.add("hidden");
@@ -203,9 +204,11 @@ function startedGame(){
     continueButton.classList.remove("hidden");
     document.getElementById("mouse").classList.remove("hidden");
     signButton.style.display="none";
+    startOverButton.style.display =" inline-block";
 
 }
 
+//sign in blood
 signButton.addEventListener("mousedown", function(){
     fateSealed.style.display = "block";
     readMe.classList.add("hidden");
@@ -230,6 +233,19 @@ readMeLink.addEventListener("mousedown", function() {
 
 })
 
+//START OVER
+function startOver(){
+rank = 0;
+checkRank();
+main_window.classList.add("hidden");
+code_window.classList.add("hidden");
+signButton.style.display="inline-block";
+continueButton.classList.add("hidden");
+startOverButton.style.display = "none";
+console.log("clicked");
+
+}
+
 //GAME PROGRESSION
 const lockedList = document.querySelectorAll(".locked");
 for (let i = 0; i < lockedList.length; i++) {
@@ -240,33 +256,44 @@ for (let i = 0; i < lockedList.length; i++) {
     lockedList[i].children[1].classList.add("forbidden");
 }
 
+startOverButton.addEventListener("mousedown", startOver);
 
+checkRank();
+function checkRank(){
+    console.log("page loaded");
 
-if(rank < 1){
-    readMe.classList.remove("hidden");   
-}
-  //rank 1
-  if(rank >=1){
-    document.getElementById("broken").style.visibility = "visible";
-    unlock(lockedList[2], "Pronouns/index.html", "public service announcement");
+    if(rank < 1){
+        readMe.classList.remove("hidden");   
+        document.getElementById("broken").style.visibility = "hidden";
+        document.getElementById("triangleLady").style.visibility = "hidden";
+        document.getElementById("flames").style.visibility = "hidden";
+        document.getElementById("warning3").style.visibility = "hidden";
+    }
 
-    startedGame();
-
-  }
-
-  //triangle lady appears
-  if(rank >=2){
-   document.getElementById("triangleLady").style.visibility = "visible";
-   unlock(lockedList[0], "TransformationTest/index.html", "spell_of_transformation");
-  }
-
-  //on fire
-  if(rank >=3){
-    document.getElementById("flames").style.visibility = "visible";
-    document.getElementById("warning3").style.visibility = "visible";
-    unlock(lockedList[1], "NewStrategy/index.html", "new strategy");
+      //rank 1
+      if(rank >=1){
+        document.getElementById("broken").style.visibility = "visible";
+        unlock(lockedList[2], "Pronouns/index.html", "public service announcement");
     
-  }
+        startedGame();
+    
+      }
+    
+      //triangle lady appears
+      if(rank >=2){
+       document.getElementById("triangleLady").style.visibility = "visible";
+       unlock(lockedList[0], "TransformationTest/index.html", "spell_of_transformation");
+      }
+    
+      //on fire
+      if(rank >=3){
+        document.getElementById("flames").style.visibility = "visible";
+        document.getElementById("warning3").style.visibility = "visible";
+        unlock(lockedList[1], "NewStrategy/index.html", "new strategy");
+        
+      }
+}
+
 //  console.log($(window).height());
 //  console.log($(window).width());
 
@@ -274,7 +301,7 @@ if(rank < 1){
 function unlock(whichContent, link, text){
 whichContent.children[0].src = "img/happy_game.png";
 whichContent.children[0].classList.add("float");
-console.log(whichContent.children[0].classList);
+// console.log(whichContent.children[0].classList);
 whichContent.children[1].href=` ${link}`;
 whichContent.children[1].innerText = `${text}`;
 whichContent.children[1].classList.remove("forbidden");
