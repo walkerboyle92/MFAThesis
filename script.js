@@ -251,6 +251,7 @@ startOverButton.style.display = "none";
 
 //GAME PROGRESSION
 const lockedList = document.querySelectorAll(".locked");
+console.log(lockedList);
 
 function lock(){
     for (let i = 0; i < lockedList.length; i++) {
@@ -306,6 +307,7 @@ function checkRank(){
        document.getElementById("warning3").style.visibility = "hidden";
 
        lock();
+       unlock(lockedList[2], "Pronouns/index.html", "public service announcement");
        unlock(lockedList[0], "TransformationTest/index.html", "spell_of_transformation");
       }
     
