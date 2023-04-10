@@ -57,6 +57,16 @@ a{
     height: 600px;
     /* width: 943px; */
 }
+/* Construction Notice*/
+#notice{
+    display: block;
+    margin: 20%;
+    color: white;
+    font-family: 'Black Ops One', cursive;
+    font-size: 46px;
+    stroke: 3px black;
+}
+
 
 /*READ ME STYLING*/
 #readMe{
