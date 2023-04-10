@@ -45,6 +45,7 @@ if(opening.getDate() > today.getDate()){
     localStorage.setItem("rank", 0); 
     document.getElementById("mouse").classList.add("hidden");
     document.getElementById("readMe").style.visibility ="hidden";
+    document.getElementById("remainder").innerText = `${remainder} days remain`
 }
 }
 

@@ -60,13 +60,23 @@ a{
 /* Construction Notice*/
 #notice{
     display: block;
-    margin: 20%;
+    margin: 10% 20% 0%;
     color: white;
     font-family: 'Black Ops One', cursive;
     font-size: 46px;
-    stroke: 3px black;
+   
 }
 
+#remainder{
+    display: block;
+    font-family: 'Silkscreen', cursive;
+    font-size: 32px;
+    text-align: center;
+    color:red;
+    background-color: black;
+    margin-top: 30px;
+    padding: 20px;
+}
 
 /*READ ME STYLING*/
 #readMe{
