@@ -30,24 +30,24 @@ window.addEventListener("mousedown", function() {
 //    alert("turn back");
 // });
 
-//release date
-let today = new Date();
-const opening = new Date("2023-04-17");
+//release date warning
+// let today = new Date();
+// const opening = new Date("2023-04-17");
 
-releaseDate();
-function releaseDate(){
-let remainder= opening.getDate() - today.getDate()
+// releaseDate();
+// function releaseDate(){
+// let remainder= opening.getDate() - today.getDate()
 
-if(opening.getDate() > today.getDate()){
+// if(opening.getDate() > today.getDate()){
 
-    console.log("the show will be available in "+ remainder+ " days");
-    document.querySelector(".overlay").style.visibility =" visible";
-    localStorage.setItem("rank", 0); 
-    document.getElementById("mouse").classList.add("hidden");
-    document.getElementById("readMe").style.visibility ="hidden";
-    document.getElementById("remainder").innerText = `${remainder} days remain`
-}
-}
+//     console.log("the show will be available in "+ remainder+ " days");
+//     document.querySelector(".overlay").style.visibility =" visible";
+//     localStorage.setItem("rank", 0); 
+//     document.getElementById("mouse").classList.add("hidden");
+//     document.getElementById("readMe").style.visibility ="hidden";
+//     document.getElementById("remainder").innerText = `${remainder} days remain`
+// }
+// }
 
 
 
