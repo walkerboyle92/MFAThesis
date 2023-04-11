@@ -70,7 +70,7 @@ function bringToTop(element)
 // localStorage.setItem("rank", 0); 
 //--> create button for this
 let rank = localStorage.getItem("rank");
-// localStorage.setItem("rank", rank);
+
 
 //number each piece of folder content
 let contentIndex = 0;
@@ -290,6 +290,7 @@ document.querySelector("label").addEventListener("mousedown", checkRank);
 
 checkRank();
 function checkRank(){
+    localStorage.setItem("rank", rank);
     console.log("rank checked: ", rank);
 
     if(rank < 1){
