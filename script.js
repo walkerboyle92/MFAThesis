@@ -4,9 +4,11 @@ $(document).ready(function(){
 
     $(function() { //draggable windows - jquery
 
-        $(window).on('load', function() {
-            console.log("loded");
-         });
+        if ($('#dirty').val()) {
+            window.location.reload();
+          }
+          // when something modifies a div that needs to be refreshed, set dirty=1
+          $('#dirty').val('1');
 
         $('.window').draggable({
           
