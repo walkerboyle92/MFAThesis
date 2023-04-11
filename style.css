@@ -171,6 +171,7 @@ a{
 /*interludes*/
 #codeWindow{
     right: 0px;
+    max-width: 500px;
 }
 
 video{

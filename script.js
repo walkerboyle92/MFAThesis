@@ -1,3 +1,9 @@
+window.onpageshow = function(event) {
+    if (event.persisted) {
+        window.location.reload() 
+        console.log("reloaded");
+    }
+};
 
 $(document).ready(function(){
 
@@ -22,7 +28,6 @@ window.addEventListener("mousedown", function() {
     bringToTop(this);
   });
 })
-
 
 
 // TURNED OFF FOR TESTS
