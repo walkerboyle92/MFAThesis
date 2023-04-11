@@ -23,6 +23,8 @@ window.addEventListener("mousedown", function() {
   });
 })
 
+
+
 // TURNED OFF FOR TESTS
 
 // //alert
@@ -69,7 +71,7 @@ function bringToTop(element)
 // localStorage.setItem("rank", 0); 
 //--> create button for this
 let rank = localStorage.getItem("rank");
-
+localStorage.setItem("rank", rank);
 
 //number each piece of folder content
 let contentIndex = 0;
