@@ -1,8 +1,8 @@
-window.onload=function() { 
+$(window).bind('load',function()  { 
     let rank = localStorage.getItem("rank");
     localStorage.setItem("rank", rank);
     console.log("page loaded", rank);
- }; 
+ });
 
 $(document).ready(function(){
 
