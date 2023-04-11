@@ -1,11 +1,7 @@
-window.onpageshow = function(event) {
-    if (event.persisted) {
-        window.location.reload() 
-        console.log("reloaded");
-    }
-};
+history.navigationMode = 'compatible';
 
 $(document).ready(function(){
+    alert('test');
 
     $(function() { //draggable windows - jquery
         $('.window').draggable({
