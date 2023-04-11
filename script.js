@@ -4,12 +4,6 @@ $(document).ready(function(){
 
     $(function() { //draggable windows - jquery
 
-        if ($('#dirty').val()) {
-            window.location.reload();
-          }
-          // when something modifies a div that needs to be refreshed, set dirty=1
-          $('#dirty').val('1');
-
         $('.window').draggable({
           
             start: function(event, ui){
@@ -57,8 +51,6 @@ window.addEventListener("mousedown", function() {
 //     document.getElementById("remainder").innerText = `${remainder} days remain`
 // }
 // }
-
-
 
 //make sure selected window is in front
 var top_z = 10;
@@ -294,10 +286,11 @@ function lock(){
 }
 
 startOverButton.addEventListener("mousedown", startOver);
+document.querySelector("label").addEventListener("mousedown", checkRank);
 
 checkRank();
 function checkRank(){
-    // console.log("page loaded", rank);
+    console.log("rank checked: ", rank);
 
     if(rank < 1){
         readMe.classList.remove("hidden");   
