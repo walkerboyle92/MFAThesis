@@ -1,9 +1,13 @@
-history.navigationMode = 'compatible';
 
 $(document).ready(function(){
-    alert('test');
+
 
     $(function() { //draggable windows - jquery
+
+        $(window).on('load', function() {
+            console.log("loded");
+         });
+
         $('.window').draggable({
           
             start: function(event, ui){
