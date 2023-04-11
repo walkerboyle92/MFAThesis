@@ -1,3 +1,8 @@
+window.onload=function() { 
+    let rank = localStorage.getItem("rank");
+    localStorage.setItem("rank", rank);
+    console.log("page loaded", rank);
+ }; 
 
 $(document).ready(function(){
 
@@ -71,7 +76,7 @@ function bringToTop(element)
 // localStorage.setItem("rank", 0); 
 //--> create button for this
 let rank = localStorage.getItem("rank");
-localStorage.setItem("rank", rank);
+// localStorage.setItem("rank", rank);
 
 //number each piece of folder content
 let contentIndex = 0;
@@ -290,7 +295,7 @@ startOverButton.addEventListener("mousedown", startOver);
 
 checkRank();
 function checkRank(){
-    console.log("page loaded", rank);
+    // console.log("page loaded", rank);
 
     if(rank < 1){
         readMe.classList.remove("hidden");   
