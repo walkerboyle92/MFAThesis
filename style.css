@@ -114,6 +114,42 @@ a{
 
 /*end of READ ME*/
 
+/*To Do List*/
+
+#toDo{
+    height: 318px;
+    position:absolute;
+    left:0px;
+    bottom: 0px;
+  
+  }
+  
+  #toDo img{
+      height: 318px;
+  }
+  
+  #list{
+      position: absolute;
+      left: 10px;
+      top: 40px;
+      font-family: 'Source Code Pro', monospace;
+      color: darkslategray;
+  }
+  
+  #list label{
+      display: block;
+      padding-top: 20px;
+  }
+  
+label:hover{
+    color: hotpink;
+} 
+
+input:checked + label {
+    color: red;
+  }
+
+
 #mouse{
     height: 300px;
     width: 316px;
@@ -378,22 +414,22 @@ video{
 }
 @media (max-width: 1024px) {
    
-/* #mobileWarning{
+#mobileWarning{
    visibility: visible;
-} */
+} 
 
-/* .overlay{
+.overlay{
     visibility: visible;
-} */
+}
 
 .window{
     visibility: hidden;
 }
 
-#notice{
+/* #notice{
     margin:auto;
     max-width: 100%;
-}
+} */
 
   }
   

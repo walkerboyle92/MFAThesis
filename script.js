@@ -218,6 +218,7 @@ let startOverButton = document.getElementById("startOver");
 
 function startedGame(){
     readMe.classList.add("hidden");
+    toDoList.classList.remove("hidden");
     main_window.classList.remove("hidden");
     code_window.classList.remove("hidden");
     continueButton.classList.remove("hidden");
@@ -282,6 +283,36 @@ function lock(){
         
 
 }
+//To Do List
+const toDoList = document.querySelector("#toDo");
+const listItems = document.querySelectorAll("label");
+
+//check to see if they are lying
+function liar(index){
+let access = Number(rank) - 2; 
+console.log( "access",access,"index",  index);
+
+if(index != access){
+    console.log("liar");
+
+    listItems[index].checked = false;
+}
+else{
+    listItems[index].checked = true;
+}
+
+}
+
+for (let i = 0; i < listItems.length; i++) {
+    let item = listItems[i];
+    item.addEventListener("mousedown", checkRank);
+    item.addEventListener("mousedown", function() {
+      liar(i);
+    });
+}
+
+
+
 
 startOverButton.addEventListener("mousedown", startOver);
 
@@ -291,7 +322,8 @@ function checkRank(){
 rank = localStorage.getItem("rank");
     if(rank < 1){
         readMe.classList.remove("hidden");   
-        console.log(readMe);
+        //hide todo list here
+        toDoList.classList.add("hidden");
         document.getElementById("broken").style.visibility = "hidden";
         document.getElementById("triangleLady").style.visibility = "hidden";
         document.getElementById("flames").style.visibility = "hidden";
@@ -315,6 +347,7 @@ rank = localStorage.getItem("rank");
         unlock(lockedList[2], "Pronouns/index.html", "public service announcement");
     
         startedGame();
+
     
       }
     
