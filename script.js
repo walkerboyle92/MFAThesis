@@ -225,6 +225,7 @@ function startedGame(){
     document.getElementById("mouse").classList.remove("hidden");
     signButton.style.display="none";
     startOverButton.style.display =" inline-block";
+ 
     
 
 }
@@ -265,6 +266,11 @@ signButton.style.display="inline-block";
 continueButton.classList.add("hidden");
 startOverButton.style.display = "none";
 
+    //list items unchecked 
+    listItems.forEach(item =>{
+        item.firstChild.checked = false;
+        });
+
 
 }
 
@@ -284,7 +290,6 @@ function lock(){
 
 }
 //To Do List
-const toDoList = document.querySelector("#toDo");
 const listItems = document.querySelectorAll("label");
 
 //check to see if they are lying
@@ -314,12 +319,16 @@ for (let i = 0; i < listItems.length; i++) {
 
 
 
+//create if statements for each index to inform check mark and reaction
+//keep checked with checkRank function
 startOverButton.addEventListener("mousedown", startOver);
 
 checkRank();
 function checkRank(){
-    console.log("page loaded", localStorage.getItem("rank"));
+console.log("page loaded", localStorage.getItem("rank"));
 rank = localStorage.getItem("rank");
+//add checked attribute for each part of the to do list so it stays checked
+
     if(rank < 1){
         readMe.classList.remove("hidden");   
         //hide todo list here
@@ -336,7 +345,6 @@ rank = localStorage.getItem("rank");
     if(rank ==1){
         lock();
         startedGame();
-    
 
     }
 
@@ -360,6 +368,9 @@ rank = localStorage.getItem("rank");
        lock();
        unlock(lockedList[2], "Pronouns/index.html", "public service announcement");
        unlock(lockedList[0], "TransformationTest/index.html", "spell_of_transformation");
+
+       //keep old list items checked
+       listItems[0].firstChild.checked = true;
       }
     
       //on fire
@@ -389,7 +400,8 @@ whichContent.children[1].classList.remove("forbidden");
 });
 
 
-
+//hide toDoList until start game
+//remove at start over
 
 
 	
