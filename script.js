@@ -330,7 +330,7 @@ rank = localStorage.getItem("rank");
 
     if(rank < 1){
         readMe.classList.remove("hidden");   
-        console.log(readMe);
+        // console.log(readMe);
         document.getElementById("broken").style.visibility = "hidden";
         document.getElementById("triangleLady").style.visibility = "hidden";
         document.getElementById("flames").style.visibility = "hidden";
