@@ -224,6 +224,7 @@ function startedGame(){
     document.getElementById("mouse").classList.remove("hidden");
     signButton.style.display="none";
     startOverButton.style.display =" inline-block";
+ 
     
 
 }
@@ -264,6 +265,11 @@ signButton.style.display="inline-block";
 continueButton.classList.add("hidden");
 startOverButton.style.display = "none";
 
+    //list items unchecked 
+    listItems.forEach(item =>{
+        item.firstChild.checked = false;
+        });
+
 
 }
 
@@ -282,13 +288,45 @@ function lock(){
         
 
 }
+//To Do List
+const listItems = document.querySelectorAll("label");
 
+//check to see if they are lying
+function liar(index){
+let access = Number(rank) - 2; 
+console.log( "access",access,"index",  index);
+
+if(index != access){
+    console.log("liar");
+
+    listItems[index].checked = false;
+}
+else{
+    listItems[index].checked = true;
+}
+
+}
+
+for (let i = 0; i < listItems.length; i++) {
+    let item = listItems[i];
+    item.addEventListener("mousedown", checkRank);
+    item.addEventListener("mousedown", function() {
+      liar(i);
+    });
+}
+
+
+
+
+//create if statements for each index to inform check mark and reaction
+//keep checked with checkRank function
 startOverButton.addEventListener("mousedown", startOver);
 
 checkRank();
 function checkRank(){
-    console.log("page loaded", localStorage.getItem("rank"));
+console.log("page loaded", localStorage.getItem("rank"));
 rank = localStorage.getItem("rank");
+//add checked attribute for each part of the to do list so it stays checked
 
     if(rank < 1){
         readMe.classList.remove("hidden");   
@@ -305,7 +343,6 @@ rank = localStorage.getItem("rank");
     if(rank ==1){
         lock();
         startedGame();
-    
 
     }
 
@@ -316,6 +353,11 @@ rank = localStorage.getItem("rank");
         unlock(lockedList[2], "Pronouns/index.html", "public service announcement");
     
         startedGame();
+
+        //ToDo List - can't check liar inputs
+    listItems[1].firstChild.checked =true;
+    listItems[2].firstChild.checked =true;
+    listItems[3].firstChild.checked =true;
     
       }
     
@@ -328,6 +370,9 @@ rank = localStorage.getItem("rank");
        lock();
        unlock(lockedList[2], "Pronouns/index.html", "public service announcement");
        unlock(lockedList[0], "TransformationTest/index.html", "spell_of_transformation");
+
+       //keep old list items checked
+       listItems[0].firstChild.checked = true;
       }
     
       //on fire
@@ -352,14 +397,13 @@ whichContent.children[1].innerText = `${text}`;
 whichContent.children[1].classList.remove("forbidden");
 }
 
-//to do list test
-const callingCPS = document.querySelector("label");
-callingCPS.addEventListener("mousedown", checkRank);
+
 
 });
 
 
-
+//hide toDoList until start game
+//remove at start over
 
 
 	
