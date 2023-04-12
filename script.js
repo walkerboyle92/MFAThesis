@@ -1,9 +1,7 @@
 
 $(document).ready(function(){
 
-
     $(function() { //draggable windows - jquery
-
         $('.window').draggable({
           
             start: function(event, ui){
@@ -25,7 +23,6 @@ window.addEventListener("mousedown", function() {
   });
 })
 
-
 // TURNED OFF FOR TESTS
 
 // //alert
@@ -33,7 +30,7 @@ window.addEventListener("mousedown", function() {
 //    alert("turn back");
 // });
 
-//release date warning
+//release date
 // let today = new Date();
 // const opening = new Date("2023-04-17");
 
@@ -51,6 +48,8 @@ window.addEventListener("mousedown", function() {
 //     document.getElementById("remainder").innerText = `${remainder} days remain`
 // }
 // }
+
+
 
 //make sure selected window is in front
 var top_z = 10;
@@ -257,9 +256,8 @@ readMeLink.addEventListener("mousedown", function() {
 
 //START OVER
 function startOver(){
-localStorage.setItem("rank", 0); 
-rank=0;
-checkRank();
+    localStorage.setItem("rank", 0);
+    checkRank();
 main_window.classList.add("hidden");
 code_window.classList.add("hidden");
 signButton.style.display="inline-block";
@@ -286,13 +284,11 @@ function lock(){
 }
 
 startOverButton.addEventListener("mousedown", startOver);
-document.querySelector("label").addEventListener("mousedown", checkRank);
 
 checkRank();
 function checkRank(){
-    localStorage.setItem("rank", rank);
-    console.log("rank checked: ", rank);
-
+    console.log("page loaded", localStorage.getItem("rank"));
+rank = localStorage.getItem("rank");
     if(rank < 1){
         readMe.classList.remove("hidden");   
         console.log(readMe);
@@ -354,7 +350,6 @@ whichContent.children[1].href=` ${link}`;
 whichContent.children[1].innerText = `${text}`;
 whichContent.children[1].classList.remove("forbidden");
 }
-
 
 
 
