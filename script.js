@@ -291,6 +291,7 @@ function lock(){
 }
 //To Do List
 const listItems = document.querySelectorAll("label");
+const toDoList = document.querySelector("#toDo");
 
 //check to see if they are lying
 function liar(index){
