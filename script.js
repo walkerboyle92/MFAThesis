@@ -289,6 +289,7 @@ checkRank();
 function checkRank(){
     console.log("page loaded", localStorage.getItem("rank"));
 rank = localStorage.getItem("rank");
+
     if(rank < 1){
         readMe.classList.remove("hidden");   
         console.log(readMe);
@@ -351,7 +352,13 @@ whichContent.children[1].innerText = `${text}`;
 whichContent.children[1].classList.remove("forbidden");
 }
 
-
+//link storage test
+const callingCPS = document.querySelector("#happy_img");
+callingCPS.addEventListener("mousedown", function(){
+    localStorage.setItem("rank", rank++);
+    rank = localStorage.getItem("rank");
+    console.log(rank);
+})
 
 });
 
