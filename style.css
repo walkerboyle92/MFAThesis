@@ -109,10 +109,40 @@ a{
 }
 /*  */
 
-
-
-
 /*end of READ ME*/
+
+/*To Do List*/
+
+#toDo{
+    height: 318px;
+  
+  }
+  
+  #toDo img{
+      height: 318px;
+  }
+  
+  #list{
+      position: absolute;
+      left: 10px;
+      top: 40px;
+      font-family: 'Source Code Pro', monospace;
+      color: darkslategray;
+  }
+  
+  #list label{
+      display: block;
+      padding-top: 20px;
+  }
+  
+label:hover{
+    color: hotpink;
+} 
+
+input:checked + label {
+    color: red;
+  }
+
 
 #mouse{
     height: 300px;
@@ -173,31 +203,6 @@ a{
     right: 0px;
     max-width: 500px;
 }
-
-/*To Do List*/
-
-#toDo{
-  height: 318px;
-
-}
-
-#toDo img{
-    height: 318px;
-}
-
-#list{
-    position: absolute;
-    left: 10px;
-    top: 40px;
-    font-family: 'Source Code Pro', monospace;
-    color: darkslategray;
-}
-
-#list label{
-    display: block;
-    padding-top: 20px;
-}
-
 
 
 video{
