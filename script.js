@@ -256,9 +256,8 @@ readMeLink.addEventListener("mousedown", function() {
 
 //START OVER
 function startOver(){
-localStorage.setItem("rank", 0); 
-rank=0;
-checkRank();
+    localStorage.setItem("rank", 0);
+    checkRank();
 main_window.classList.add("hidden");
 code_window.classList.add("hidden");
 signButton.style.display="inline-block";
@@ -288,8 +287,8 @@ startOverButton.addEventListener("mousedown", startOver);
 
 checkRank();
 function checkRank(){
-    console.log("page loaded", rank);
-
+    console.log("page loaded", localStorage.getItem("rank"));
+rank = localStorage.getItem("rank");
     if(rank < 1){
         readMe.classList.remove("hidden");   
         console.log(readMe);
@@ -351,7 +350,6 @@ whichContent.children[1].href=` ${link}`;
 whichContent.children[1].innerText = `${text}`;
 whichContent.children[1].classList.remove("forbidden");
 }
-
 
 
 
