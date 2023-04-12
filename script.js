@@ -352,13 +352,9 @@ whichContent.children[1].innerText = `${text}`;
 whichContent.children[1].classList.remove("forbidden");
 }
 
-//link storage test
-const callingCPS = document.querySelector("#happy_img");
-callingCPS.addEventListener("mousedown", function(){
-    localStorage.setItem("rank", rank++);
-    rank = localStorage.getItem("rank");
-    console.log(rank);
-})
+//to do list test
+const callingCPS = document.querySelector("label");
+callingCPS.addEventListener("mousedown", checkRank);
 
 });
 
