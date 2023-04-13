@@ -283,7 +283,7 @@ toDoList.classList.remove("hidden");
  //get rid of ending
  ending.classList.add("hidden");
  ending.nextElementSibling.classList.add("hidden");
-
+console.log(ending);
     //list items unchecked 
     listItems.forEach(item =>{
         item.firstChild.checked = false;
