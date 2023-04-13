@@ -315,14 +315,13 @@ if(index != access){
     const textnode = document.createTextNode("LIES!");
     node.appendChild(textnode);
     toDoList.appendChild(node);
-  
- 
 
     listItems[index].firstChild.click(function() { return false; });
 }
-// else{
-//     listItems[index].checked = true;
-// }
+else{
+    listItems[index].firstChild.click(function() { return true; });
+    listItems[index].firstChild.disabled = true;
+}
 
 }
 
