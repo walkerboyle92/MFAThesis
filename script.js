@@ -383,6 +383,8 @@ rank = localStorage.getItem("rank");
 
        //keep old list items checked
        listItems[0].firstChild.checked = true;
+       listItems[0].firstChild.disabled = true;
+
 
        //add unlocked animation
         folders[2].firstElementChild.lastElementChild.style.color = "black"; //reset color
@@ -394,11 +396,26 @@ rank = localStorage.getItem("rank");
         document.getElementById("flames").style.visibility = "visible";
         document.getElementById("warning3").style.visibility = "visible";
         unlock(lockedList[1], "https://walkerboyle.com/MFA/NewStrategy/", "new strategy");
+
+        //keep old list items checked
+       listItems[0].firstChild.checked = true;
+       listItems[0].firstChild.disabled = true;
+       listItems[1].firstChild.checked = true;
+       listItems[1].firstChild.disabled = true;
+
+
         
       }
 
       if(rank>=5){
         folders[1].firstElementChild.lastElementChild.style.color = "black";
+                //keep old list items checked
+       listItems[0].firstChild.checked = true;
+       listItems[0].firstChild.disabled = true;
+       listItems[1].firstChild.checked = true;
+       listItems[1].firstChild.disabled = true;
+       listItems[2].firstChild.checked = true;
+       listItems[2].firstChild.disabled = true;
       }
 }
 
