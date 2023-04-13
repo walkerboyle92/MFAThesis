@@ -346,6 +346,11 @@ rank = localStorage.getItem("rank");
         folders[2].firstElementChild.lastElementChild.style.color = "black";
         folders[1].firstElementChild.lastElementChild.style.color = "black";
 
+       listItems.forEach(item =>{
+        item.firstChild.disabled=false;
+        item.firstChild.checked =false;
+    })
+
     }
 
     if(rank ==1){
