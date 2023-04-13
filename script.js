@@ -277,7 +277,7 @@ document.getElementById("mouse").classList.remove("hidden");
 toDoList.classList.remove("started");
 toDoList.classList.add("beginning");
 toDoList.classList.remove("hidden");
-
+main_window.appendChild("startOverButton");
     //list items unchecked 
     listItems.forEach(item =>{
         item.firstChild.checked = false;
