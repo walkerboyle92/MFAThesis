@@ -301,11 +301,11 @@ console.log( "access",access,"index",  index);
 if(index != access){
     console.log("liar");
 
-    listItems[index].click(function() { return false; });
+    listItems[index].firstChild.click(function() { return false; });
 }
-else{
-    listItems[index].checked = true;
-}
+// else{
+//     listItems[index].checked = true;
+// }
 
 }
 
