@@ -13,9 +13,12 @@ body {
 
 header{
     text-align: center;
-    height: 12%;
+    height: 130px;
     margin: 0px;
     padding: 0px;
+}
+header img{
+    width: 400px;
 }
 
 #button{
@@ -51,7 +54,7 @@ img{
 }
 #unity-container.unity-desktop {
      left: 50%;
-      top: 62%; 
+      top: 450px; 
       transform: translate(-50%, -50%) 
     }
 #unity-container.unity-mobile { width: 100%; height: 100% }
@@ -80,7 +83,15 @@ img{
     }
 
 
-#unity-build-title { float: right; margin-right: 10px; line-height: 38px;       font-family: 'Rubik Pixels', cursive;
+#unity-build-title { float: right; margin-right: 10px; line-height: 38px; font-family: 'Silkscreen', cursive;
     font-size: 46px; color: white;}
 #unity-fullscreen-button { float: right; width: 38px; height: 38px; background: url('fullscreen-button.png') no-repeat center }
 #unity-warning { position: absolute; left: 50%; top: 5%; transform: translate(-50%); background: white; padding: 10px; display: none }
+
+
+@media (max-width: 1250px){
+
+    .left, .right{
+        display: none;
+    }
+}
