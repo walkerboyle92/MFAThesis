@@ -13,6 +13,7 @@ $(document).ready(function(){
  //main window
 let main_window = document.getElementById('welcome');
 let code_window = document.getElementById('codeWindow');
+const error_window = document.getElementById(`errorWindow`);
 
 //find all windows and bring the active one to top
 let windows = document.querySelectorAll('.window');
@@ -459,6 +460,7 @@ rank = localStorage.getItem("rank");
         ending.classList.remove("hidden");
         ending.addEventListener("animationend", function(){
             ending.nextElementSibling.classList.remove("hidden");
+            error_window.classList.add('hidden');
         })
        
 
