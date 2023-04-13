@@ -62,6 +62,7 @@ function bringToTop(element)
     document.getElementById("mobileWarning").style.zIndex = top_z +1;
     document.getElementById("readMe").style.zIndex = top_z +1;
     document.getElementById("startOver").style.zIndex = top_z +1;
+    document.getElementById("triangleLady").style.zIndex = top_z-1;
     
 }
 
