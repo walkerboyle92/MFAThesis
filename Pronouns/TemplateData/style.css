@@ -6,7 +6,9 @@ body {
 
 header{
     text-align: center;
-    height: 12%;
+    height: 130px;
+    margin: 0px;
+    padding: 0px;
 }
 
 #button{
@@ -19,7 +21,7 @@ header{
  }
  .left{
     position: absolute;
-    left: -6%;
+    left: -4%;
     top: 2%;
     height: 110%;
     width: 25%;
@@ -27,7 +29,7 @@ header{
 
 .right{
     position: absolute;
-    right: -5%;
+    right: -4%;
     top: 2%;
     height: 110%;
     width: 25%;  
@@ -40,7 +42,8 @@ header{
 }
 
 #unity-container { position: absolute }
-#unity-container.unity-desktop { left: 50%; top: 60%; transform: translate(-50%, -50%) }
+#unity-container.unity-desktop {      left: 50%;
+      top: 420px;  transform: translate(-50%, -50%) }
 #unity-container.unity-mobile { width: 100%; height: 100% }
 #unity-canvas { background: #231F20 }
 .unity-mobile #unity-canvas { width: 100%; height: 100% }
@@ -51,6 +54,13 @@ header{
 #unity-footer { position: relative }
 .unity-mobile #unity-footer { display: none }
 #unity-webgl-logo { float:left; width: 204px; height: 38px; background: url('webgl-logo.png') no-repeat center }
-#unity-build-title { float: right; margin-right: 10px; line-height: 38px;       font-family: 'Rubik Pixels', cursive; font-size: 32px; color:white;}
+#unity-build-title { float: right; margin-right: 10px; line-height: 38px;     font-family: 'Silkscreen', cursive; font-size: 32px; color:white;}
 #unity-fullscreen-button { float: right; width: 38px; height: 38px; background: url('fullscreen-button.png') no-repeat center }
 #unity-warning { position: absolute; left: 50%; top: 5%; transform: translate(-50%); background: white; padding: 10px; display: none }
+
+@media (max-width: 1300px){
+
+    .left, .right{
+        display: none;
+    }
+}
