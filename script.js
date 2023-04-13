@@ -216,6 +216,7 @@ let fateSealed =  document.getElementById("fateSealed")
 let startOverButton = document.getElementById("startOver");
 
 
+
 function startedGame(){
     readMe.classList.add("hidden");
     toDoList.classList.remove("hidden");
@@ -225,6 +226,7 @@ function startedGame(){
     document.getElementById("mouse").classList.remove("hidden");
     signButton.style.display="none";
     startOverButton.style.display =" inline-block";
+    document.getElementById("mouse").classList.add("hidden");
  
     
 
@@ -248,11 +250,13 @@ fateSealed.addEventListener("animationend", function(){
 
 continueButton.addEventListener("mousedown", function(){
     readMe.classList.add("hidden");
+    document.getElementById("mouse").classList.add("hidden");
 })
    
 
 readMeLink.addEventListener("mousedown", function() {
     readMe.classList.remove("hidden"); 
+    document.getElementById("mouse").classList.remove("hidden");
 
 })
 
