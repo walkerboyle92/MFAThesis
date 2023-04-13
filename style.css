@@ -230,6 +230,7 @@ label:hover{
 #codeWindow{
     right: 0px;
     max-width: 500px;
+    max-height: 537px;
 }
 
 
@@ -413,7 +414,7 @@ video{
     60%{opacity: 100%;}
     100%{opacity: 0%; };
 }
-@media (max-width: 1024px) {
+@media (max-height: 580px), (max-width: 1024px) {
    
 #mobileWarning{
    visibility: visible;
