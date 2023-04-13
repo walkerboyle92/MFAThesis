@@ -280,9 +280,13 @@ toDoList.classList.remove("started");
 toDoList.classList.add("beginning");
 toDoList.classList.remove("hidden");
 
+//reset bg
+document.body.style.backgroundImage = "url('img/8bitPentagram.jpg')"; 
+
  //get rid of ending
  ending.classList.add("hidden");
  ending.nextElementSibling.classList.add("hidden");
+
 console.log(ending);
     //list items unchecked 
     listItems.forEach(item =>{
