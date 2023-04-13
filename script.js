@@ -275,6 +275,7 @@ startOverButton.style.display = "none";
 document.getElementById("mouse").classList.remove("hidden");
 toDoList.classList.remove("started");
 toDoList.classList.add("beginning");
+toDoList.classList.remove("hidden");
 
     //list items unchecked 
     listItems.forEach(item =>{
@@ -460,6 +461,8 @@ rank = localStorage.getItem("rank");
     document.getElementById("flames").style.visibility = "hidden";
     document.getElementById("warning3").style.visibility = "hidden";
     document.getElementById("triangleLady").style.visibility = "hidden";
+    document.getElementById("broken").style.visibility = "hidden";
+    toDoList.classList.add("hidden");
 
     //append start over button
     ending.nextElementSibling.appendChild(startOverButton);
