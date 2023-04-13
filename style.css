@@ -491,5 +491,13 @@ video{
     max-width: 100%;
 } */
 
+#ending{
+    visibility: hidden;
+}
+
+#replay-window{
+    visibility: hidden;
+}
+
   }
   
