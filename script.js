@@ -304,6 +304,13 @@ console.log( "access",access,"index",  index);
 
 if(index != access){
     console.log("liar");
+    console.log(toDoList);
+    const node = document.createElement("p");
+    const textnode = document.createTextNode("LIES!");
+    node.appendChild(textnode);
+    toDoList.appendChild(node);
+  
+ 
 
     listItems[index].firstChild.click(function() { return false; });
 }
