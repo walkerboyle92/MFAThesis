@@ -96,15 +96,15 @@ a{
 
 #signButton{
     position: absolute;
-    right: 2%;
-    bottom: 2%;
+    right: 10px;
+    bottom: 8px;
     height: 10%;
 }
 
 #continueButton{
     position: absolute;
-    right: 2%;
-    bottom: 2%;
+    right: 10px;
+    bottom: 8px;
     height: 10%;
 }
 /*  */
