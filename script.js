@@ -230,8 +230,10 @@ function startedGame(){
     document.getElementById("mouse").classList.add("hidden");
     toDoList.classList.add("started");
 toDoList.classList.remove("beginning");
- 
-    
+
+
+ //add startOVer Button before folders
+  main_window.insertBefore(startOverButton, main_window.children[0]);
 
 }
 
@@ -277,7 +279,8 @@ document.getElementById("mouse").classList.remove("hidden");
 toDoList.classList.remove("started");
 toDoList.classList.add("beginning");
 toDoList.classList.remove("hidden");
-main_window.appendChild("startOverButton");
+
+
     //list items unchecked 
     listItems.forEach(item =>{
         item.firstChild.checked = false;
