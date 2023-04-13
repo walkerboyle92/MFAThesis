@@ -269,6 +269,7 @@ code_window.classList.add("hidden");
 signButton.style.display="inline-block";
 continueButton.classList.add("hidden");
 startOverButton.style.display = "none";
+document.getElementById("mouse").classList.remove("hidden");
 
     //list items unchecked 
     listItems.forEach(item =>{
