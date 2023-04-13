@@ -332,7 +332,6 @@ rank = localStorage.getItem("rank");
 
     if(rank < 1){
         readMe.classList.remove("hidden");   
-        //hide todo list here
         toDoList.classList.add("hidden");
         document.getElementById("broken").style.visibility = "hidden";
         document.getElementById("triangleLady").style.visibility = "hidden";
@@ -341,12 +340,18 @@ rank = localStorage.getItem("rank");
 
         //reset links and images
         lock();
+
+        folders[0].firstElementChild.lastElementChild.style.color = "pink";
+        //reset folders
+        folders[2].firstElementChild.lastElementChild.style.color = "black";
+        folders[1].firstElementChild.lastElementChild.style.color = "black";
+
     }
 
     if(rank ==1){
         lock();
         startedGame();
-
+       
     }
 
       //calling cps
@@ -356,6 +361,12 @@ rank = localStorage.getItem("rank");
         unlock(lockedList[2], "Pronouns/index.html", "public service announcement");
     
         startedGame();
+
+        //add unlocked animation
+        folders[2].firstElementChild.lastElementChild.style.color = "pink";
+        folders[0].firstElementChild.lastElementChild.style.color = "black"; //reset old folder
+
+        //make box checked & disabled
 
     
       }
@@ -372,6 +383,10 @@ rank = localStorage.getItem("rank");
 
        //keep old list items checked
        listItems[0].firstChild.checked = true;
+
+       //add unlocked animation
+        folders[2].firstElementChild.lastElementChild.style.color = "black"; //reset color
+        folders[1].firstElementChild.lastElementChild.style.color = "pink";
       }
     
       //on fire
@@ -380,6 +395,10 @@ rank = localStorage.getItem("rank");
         document.getElementById("warning3").style.visibility = "visible";
         unlock(lockedList[1], "https://walkerboyle.com/MFA/NewStrategy/", "new strategy");
         
+      }
+
+      if(rank>=5){
+        folders[1].firstElementChild.lastElementChild.style.color = "black";
       }
 }
 

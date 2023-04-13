@@ -46,10 +46,16 @@
       </a-entity> -->
 
         <script>
+            
 //define videosphere
 var videosphere = document.querySelector("#video2");
 let videoplayed = false;
 console.log(videoplayed);
+
+
+  let rank = localStorage.getItem("rank");
+      localStorage.setItem("rank", 5); 
+      console.log(rank);
 
 
    
@@ -107,9 +113,6 @@ AFRAME.registerComponent('hide-on-play', {
 
 });
 
-let rank = localStorage.getItem("rank");
-      localStorage.setItem("rank", 5); 
-      console.log(rank);
 
 
 
