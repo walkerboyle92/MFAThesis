@@ -115,10 +115,21 @@ a{
 
 #toDo{
     height: 318px;
+
+  
+  }
+  .beginning{
+    position:absolute;
+    left:0px;
+    top: 50%;
+
+  }
+
+  .started{
     position:absolute;
     left:0px;
     top: 0px;
-  
+
   }
   
   #toDo img{

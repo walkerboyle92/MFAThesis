@@ -227,6 +227,8 @@ function startedGame(){
     signButton.style.display="none";
     startOverButton.style.display =" inline-block";
     document.getElementById("mouse").classList.add("hidden");
+    toDoList.classList.add("started");
+toDoList.classList.remove("beginning");
  
     
 
@@ -237,6 +239,7 @@ signButton.addEventListener("mousedown", function(){
     fateSealed.style.display = "block";
     readMe.classList.add("hidden");
     document.getElementById("mouse").classList.add("hidden");
+    toDoList.classList.add("hidden");
 
 })
 
@@ -270,6 +273,8 @@ signButton.style.display="inline-block";
 continueButton.classList.add("hidden");
 startOverButton.style.display = "none";
 document.getElementById("mouse").classList.remove("hidden");
+toDoList.classList.remove("started");
+toDoList.classList.add("beginning");
 
     //list items unchecked 
     listItems.forEach(item =>{
@@ -344,11 +349,13 @@ rank = localStorage.getItem("rank");
 
     if(rank < 1){
         readMe.classList.remove("hidden");   
-        toDoList.classList.add("hidden");
+  
         document.getElementById("broken").style.visibility = "hidden";
         document.getElementById("triangleLady").style.visibility = "hidden";
         document.getElementById("flames").style.visibility = "hidden";
         document.getElementById("warning3").style.visibility = "hidden";
+
+
 
         //reset links and images
         lock();
