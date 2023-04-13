@@ -280,16 +280,16 @@ toDoList.classList.remove("started");
 toDoList.classList.add("beginning");
 toDoList.classList.remove("hidden");
 
+ //get rid of ending
+ ending.classList.add("hidden");
+ ending.nextElementSibling.classList.add("hidden");
 
     //list items unchecked 
     listItems.forEach(item =>{
         item.firstChild.checked = false;
         });
 
-        //get rid of ending
-        ending.classList.add("hidden");
-        ending.nextElementSibling.classList.add("hidden");
-
+       
 }
 
 //GAME PROGRESSION
