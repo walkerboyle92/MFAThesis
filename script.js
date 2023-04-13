@@ -461,6 +461,8 @@ rank = localStorage.getItem("rank");
         ending.addEventListener("animationend", function(){
             ending.nextElementSibling.classList.remove("hidden");
             error_window.classList.add('hidden');
+            console.log(error_window);
+
         })
        
 
