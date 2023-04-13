@@ -301,7 +301,7 @@ console.log( "access",access,"index",  index);
 if(index != access){
     console.log("liar");
 
-    listItems[index].checked = false;
+    listItems[index].click(function() { return false; });
 }
 else{
     listItems[index].checked = true;
@@ -349,7 +349,6 @@ rank = localStorage.getItem("rank");
        listItems.forEach(item =>{
         item.firstChild.disabled=false;
         item.firstChild.checked =false;
-        console.log(item);
     })
 
     }
