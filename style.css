@@ -229,8 +229,8 @@ label:hover{
 /*interludes*/
 #codeWindow{
     right: 0px;
-    max-width: 565px;
-    max-height: 839px;
+    max-width: 500px;
+    max-height: 742px;
 }
 
 
@@ -373,7 +373,7 @@ video{
 #triangleLady{
     position:absolute;
     z-index: 1;
-    top: 40%;
+    bottom: 0px;
     left: -100px;
     visibility: hidden;
 }
