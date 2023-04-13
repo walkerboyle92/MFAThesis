@@ -418,7 +418,7 @@ rank = localStorage.getItem("rank");
       if(rank >=4){
         document.getElementById("flames").style.visibility = "visible";
         document.getElementById("warning3").style.visibility = "visible";
-        unlock(lockedList[1], "https://walkerboyle.com/MFA/NewStrategy/", "new strategy");
+        unlock(lockedList[1], "NewStrategy/index.html", "new strategy");
 
         //keep old list items checked
        listItems[0].firstChild.checked = true;

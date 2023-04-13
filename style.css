@@ -370,6 +370,51 @@ video{
     animation-fill-mode: forwards;
 }
 
+/* ENDING*/
+#ending{
+    position: fixed; /* Sit on top of the page content */
+    /* display:none; */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    animation: fadeIn;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+
+}
+
+#replay-window{
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    margin: 0px;
+}
+
+#replay-img{
+    width: 600px;
+}
+
+.end-links{
+    padding: 10px;
+}
+
+.end-links a{
+    color: rgb(121, 121, 122);
+}
+
+.end-links a:hover{
+    color: red;
+}
+
+
+
+
 #triangleLady{
     position:absolute;
     z-index: 1;
@@ -413,6 +458,11 @@ video{
     40%{opacity: 100%;}
     60%{opacity: 100%;}
     100%{opacity: 0%; };
+}
+
+@keyframes fadeIn{
+    0%{opacity: 0%; display:none;}
+    100%{opacity: 1000%;}
 }
 @media (max-height: 580px), (max-width: 1024px) {
    
