@@ -349,6 +349,7 @@ rank = localStorage.getItem("rank");
        listItems.forEach(item =>{
         item.firstChild.disabled=false;
         item.firstChild.checked =false;
+        console.log(item);
     })
 
     }
