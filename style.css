@@ -394,10 +394,18 @@ video{
     top: 25%;
     left: 30%;
     margin: 0px;
+
+    animation: open;
+    animation-duration: .2s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+
+ 
 }
 
 #replay-img{
     width: 600px;
+
 }
 
 .end-links{

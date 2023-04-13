@@ -281,6 +281,9 @@ toDoList.classList.add("beginning");
         item.firstChild.checked = false;
         });
 
+        //get rid of ending
+        ending.classList.add("hidden");
+        ending.nextElementSibling.classList.add("hidden");
 
 }
 
@@ -339,6 +342,9 @@ for (let i = 0; i < listItems.length; i++) {
 //create if statements for each index to inform check mark and reaction
 //keep checked with checkRank function
 startOverButton.addEventListener("mousedown", startOver);
+
+const ending = document.querySelector("#ending");
+console.log(ending);
 
 checkRank();
 function checkRank(){
@@ -439,6 +445,26 @@ rank = localStorage.getItem("rank");
        listItems[1].firstChild.disabled = true;
        listItems[2].firstChild.checked = true;
        listItems[2].firstChild.disabled = true;
+
+       //reveal ending
+        ending.classList.remove("hidden");
+        ending.addEventListener("animationend", function(){
+            ending.nextElementSibling.classList.remove("hidden");
+        })
+       
+
+        //hide other windows
+    main_window.classList.add("hidden");
+    code_window.classList.add("hidden");
+    signButton.style.display="inline-block";
+    document.getElementById("flames").style.visibility = "hidden";
+    document.getElementById("warning3").style.visibility = "hidden";
+    document.getElementById("triangleLady").style.visibility = "hidden";
+
+    //append start over button
+    ending.nextElementSibling.appendChild(startOverButton);
+    
+
       }
 }
 
