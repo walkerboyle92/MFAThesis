@@ -464,7 +464,7 @@ rank = localStorage.getItem("rank");
 
 
        //hide error window
-       changeState(folders[3],error_window, folders );
+ 
     
        //reveal ending
         ending.classList.remove("hidden");
