@@ -13,7 +13,8 @@ $(document).ready(function(){
  //main window
 let main_window = document.getElementById('welcome');
 let code_window = document.getElementById('codeWindow');
-const error_window = document.getElementById(`errorWindow`);
+const error_window = document.querySelectorAll(`#errorWindow`);
+
 
 
 //find all windows and bring the active one to top
@@ -463,7 +464,7 @@ rank = localStorage.getItem("rank");
 
 
        //hide error window
-       changeState(folders[3],document.querySelectorAll(`#"errorWindow`), folders );
+       changeState(folders[3],error_window, folders );
     
        //reveal ending
         ending.classList.remove("hidden");
