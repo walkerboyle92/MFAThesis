@@ -290,6 +290,7 @@ toDoList.classList.remove("hidden");
 //reset bg
 document.body.style.backgroundImage = "url('img/8bitPentagram.jpg')"; 
 document.body.style.backgroundSize = "37.5px 30px";
+console.log("resetting background");
 
  //get rid of ending
  ending.classList.add("hidden");
