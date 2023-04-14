@@ -283,6 +283,7 @@ toDoList.classList.remove("hidden");
 
 //reset bg
 document.body.style.backgroundImage = "url('img/8bitPentagram.jpg')"; 
+document.body.style.backgroundSize = "50px 50px";
 
  //get rid of ending
  ending.classList.add("hidden");
@@ -456,12 +457,13 @@ rank = localStorage.getItem("rank");
        listItems[2].firstChild.checked = true;
        listItems[2].firstChild.disabled = true;
 
+
+       //hide error window
        //reveal ending
         ending.classList.remove("hidden");
         ending.addEventListener("animationend", function(){
             ending.nextElementSibling.classList.remove("hidden");
-            error_window.classList.add('hidden');
-            console.log(error_window);
+ 
 
         })
        
