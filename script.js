@@ -463,7 +463,7 @@ rank = localStorage.getItem("rank");
 
 
        //hide error window
-       changeState(folders[3],folders[3].lastElementChild, folders );
+       changeState(folders[3],document.querySelectorAll(`#"errorWindow`), folders );
     
        //reveal ending
         ending.classList.remove("hidden");
