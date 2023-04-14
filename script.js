@@ -354,7 +354,7 @@ for (let i = 0; i < listItems.length; i++) {
 }
 
 
-
+console.log(folders[3].children[0].children[0].getAttribute('src'), folders[3].lastElementChild.classList);
 
 //create if statements for each index to inform check mark and reaction
 //keep checked with checkRank function
@@ -464,7 +464,8 @@ rank = localStorage.getItem("rank");
 
 
        //hide error window
- 
+ folders[3].children[0].children[0].setAttribute('src',  "img/folder-closed.png");
+ folders[3].lastElementChild.classList.add("hidden");
     
        //reveal ending
         ending.classList.remove("hidden");
