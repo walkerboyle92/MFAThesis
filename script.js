@@ -329,7 +329,7 @@ function liar(index){
 let access = Number(rank) - 2; 
 console.log( "access",access,"index",  index);
 
-if(index != access){
+if(index > access){
     console.log("liar");
     console.log(toDoList);
     const node = document.createElement("p");
