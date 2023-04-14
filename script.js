@@ -13,7 +13,7 @@ $(document).ready(function(){
  //main window
 let main_window = document.getElementById('welcome');
 let code_window = document.getElementById('codeWindow');
-const error_window = document.querySelectorAll(`#errorWindow`);
+const error_window = document.getElementById(`errorWindow`);
 
 
 
@@ -289,7 +289,7 @@ toDoList.classList.remove("hidden");
 
 //reset bg
 document.body.style.backgroundImage = "url('img/8bitPentagram.jpg')"; 
-document.body.style.backgroundSize = "50px 50px";
+document.body.style.backgroundSize = "37.5px 30px";
 
  //get rid of ending
  ending.classList.add("hidden");
@@ -466,6 +466,7 @@ rank = localStorage.getItem("rank");
        //hide error window
  folders[3].children[0].children[0].setAttribute('src',  "img/folder-closed.png");
  folders[3].lastElementChild.classList.add("hidden");
+ console.log(error_window);
     
        //reveal ending
         ending.classList.remove("hidden");
