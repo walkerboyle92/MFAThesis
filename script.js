@@ -15,6 +15,7 @@ let main_window = document.getElementById('welcome');
 let code_window = document.getElementById('codeWindow');
 const error_window = document.getElementById(`errorWindow`);
 
+
 //find all windows and bring the active one to top
 let windows = document.querySelectorAll('.window');
      windows.forEach(window =>{
@@ -78,11 +79,14 @@ let contentIndex = 0;
 let folders = document.querySelectorAll('.folder');
 
 
+
+
 folders.forEach(folder =>{ 
 
 //get folder content
 let folderContent = folder.querySelectorAll('.folder-content')
 let folder_img = folder.querySelector('.folder-img');
+// console.log(folder);
 
 
 folderContent.forEach(content =>{
@@ -112,6 +116,7 @@ function changeState (whichFolder, content, otherFolders){
 let folderState = whichFolder.children[0].children[0].getAttribute('src');
 let mainScreen = document.querySelector('main');
 let folderContent = document.querySelectorAll('.folder-content');
+
 
 
 //CLOSE OTHER FOLDERS
@@ -300,7 +305,7 @@ console.log(ending);
 
 //GAME PROGRESSION
 const lockedList = document.querySelectorAll(".locked");
-console.log(lockedList);
+
 
 function lock(){
     for (let i = 0; i < lockedList.length; i++) {
@@ -355,7 +360,6 @@ for (let i = 0; i < listItems.length; i++) {
 startOverButton.addEventListener("mousedown", startOver);
 
 const ending = document.querySelector("#ending");
-console.log(ending);
 
 checkRank();
 function checkRank(){
@@ -459,10 +463,12 @@ rank = localStorage.getItem("rank");
 
 
        //hide error window
+       changeState(folders[3],folders[3].lastElementChild, folders );
+    
        //reveal ending
         ending.classList.remove("hidden");
         ending.addEventListener("animationend", function(){
-            ending.nextElementSibling.classList.remove("hidden");
+        ending.nextElementSibling.classList.remove("hidden");
  
 
         })
