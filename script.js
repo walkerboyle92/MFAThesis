@@ -466,8 +466,7 @@ rank = localStorage.getItem("rank");
 
        //hide error window
  folders[3].children[0].children[0].setAttribute('src',  "img/folder-closed.png");
- folders[3].lastElementChild.classList.add("hidden");
- console.log(folders[3].children[0].children[0].getAttribute('src'));
+error_window.classList.add("hidden");
  console.log("hiding error window");
     
        //reveal ending
