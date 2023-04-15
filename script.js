@@ -425,7 +425,7 @@ rank = localStorage.getItem("rank");
 
        lock();
        unlock(lockedList[2], "Pronouns/index.html", "public service announcement");
-       unlock(lockedList[0], "TransformationTest/index.html", "spell_of_transformation");
+       unlock(lockedList[0], "Transformation/index.html", "spell_of_transformation");
 
        //keep old list items checked
        listItems[0].firstChild.checked = true;
