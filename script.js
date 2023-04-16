@@ -413,6 +413,7 @@ rank = localStorage.getItem("rank");
         folders[0].firstElementChild.lastElementChild.style.color = "black"; //reset old folder
 
         //make box checked & disabled
+listItems[0].firstChild.checked =true;
 
     
       }
@@ -430,6 +431,8 @@ rank = localStorage.getItem("rank");
        //keep old list items checked
        listItems[0].firstChild.checked = true;
        listItems[0].firstChild.disabled = true;
+       //if they click "return"
+    listItems[1].firstChild.checked =true;
 
 
        //add unlocked animation
@@ -448,6 +451,8 @@ rank = localStorage.getItem("rank");
        listItems[0].firstChild.disabled = true;
        listItems[1].firstChild.checked = true;
        listItems[1].firstChild.disabled = true;
+              //if they click "return"
+    listItems[2].firstChild.checked =true;
 
 
         
@@ -462,6 +467,10 @@ rank = localStorage.getItem("rank");
        listItems[1].firstChild.disabled = true;
        listItems[2].firstChild.checked = true;
        listItems[2].firstChild.disabled = true;
+                     //if they click "return"
+    listItems[3].firstChild.checked =true;
+
+
 
 
        //hide error window
