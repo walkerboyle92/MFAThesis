@@ -13,18 +13,20 @@ body {
 
 header{
     text-align: center;
-    height: 130px;
+    height: 100px;
     margin: 0px;
     padding: 0px;
 }
 header img{
-    width: 400px;
+    width: 280px;
 }
 
 #button{
     
-   float: left;
-/* margin-left: 400px; */
+position: absolute;
+top: 10px;
+left: 10px;
+    margin: 10px;
     width: 125px; 
     height: 50px; 
     /* background: url('webgl-logo.png') no-repeat center */
@@ -33,7 +35,7 @@ header img{
 .left{
     position: absolute;
     left: -6%;
-    top: 2%;
+    top: 7%;
     height: 110%;
     width: 25%;
 }
@@ -41,7 +43,7 @@ header img{
 .right{
     position: absolute;
     right: -5%;
-    top: 2%;
+    top: 7%;
     height: 110%;
     width: 25%;  
 }
@@ -54,7 +56,7 @@ img{
 }
 #unity-container.unity-desktop {
      left: 50%;
-      top: 450px; 
+      top: 420px; 
       transform: translate(-50%, -50%) 
     }
 #unity-container.unity-mobile { width: 100%; height: 100% }
@@ -85,7 +87,18 @@ img{
 
 #unity-build-title { float: right; margin-right: 10px; line-height: 38px; font-family: 'Silkscreen', cursive;
     font-size: 46px; color: white;}
-#unity-fullscreen-button { float: right; width: 38px; height: 38px; background: url('fullscreen-button.png') no-repeat center }
+
+    #unity-fullscreen-button { 
+        position: absolute;
+         width:900px;
+         height:600px;
+         z-index: 1;
+         left: 50%;
+         transform: translate(-50%, -50%) ;
+      top: 300px; 
+ 
+        background: url('../../img/bookcase.png') no-repeat  center 
+    }
 #unity-warning { position: absolute; left: 50%; top: 5%; transform: translate(-50%); background: white; padding: 10px; display: none }
 
 
